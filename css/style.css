@@ -1,0 +1,998 @@
+:root {
+    --bg1: #1A1715;
+    --bg2: #26211E;
+    --color1: #EDE6DA;
+    --color2: #A89F92;
+    --accent: #C9893F;
+}
+
+@font-face {
+    font-family: 'Podkova';
+    src: url(../font/Podkova-VariableFont_wght.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'GeoB';
+    src: url(../font/Geologica-VariableFont_CRSV\,SHRP\,slnt\,wght.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'GeoSB';
+    src: url(../font/Geologica-VariableFont_CRSV\,SHRP\,slnt\,wght.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'GeoM';
+    src: url(../font/Geologica-VariableFont_CRSV\,SHRP\,slnt\,wght.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'GeoR';
+    src: url(../font/Geologica-VariableFont_CRSV\,SHRP\,slnt\,wght.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'GsTR';
+    src: url(../font/GolosText-VariableFont_wght.ttf);
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3s;
+    text-decoration: none;
+    font-family: "GsTR";
+    scroll-behavior: smooth;
+}
+
+*::after {
+    transition: 0.3s;
+}
+
+/* общие */
+body {
+    background-color: var(--bg1);
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: 'GeoB';
+    color: var(--color1);
+    font-size: 48px;
+}
+
+.block_start,
+.block_end {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+/* Навигация */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a1715de;
+    z-index: 10000;
+}
+
+.logoNavbarNum {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 20px;
+
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.navbarAndNum {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+}
+
+.logoNavbarNum img {
+    width: 122px;
+    height: 44px;
+}
+
+.w1h24 {
+    width: 1px;
+    height: 24px;
+    background-color: var(--color1);
+}
+
+.navbarAndNum a {
+    font-family: "GeoR";
+    color: var(--color1);
+    font-size: 20px;
+    position: relative;
+}
+
+.navbarAndNum a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--accent);
+    transform: scaleX(0);
+    transform-origin: bottom left;
+}
+
+.navbarAndNum a:hover::after {
+    transform: scaleX(1);
+}
+
+
+
+/* Шапка */
+header img {
+    width: 537px;
+    height: 571px;
+    display: flex;
+    margin-right: 20px;
+}
+
+header {
+    display: flex;
+    margin-top: 167px;
+    justify-content: space-between;
+}
+
+
+h1 {
+    color: var(--color1);
+    font-family: 'Podkova';
+    font-size: 72px;
+    font-weight: 700;
+    width: 604px;
+    margin-bottom: 8px;
+    margin-top: 105px;
+}
+
+h1 span {
+    color: var(--accent);
+    font-family: 'Podkova';
+    font-size: 72px;
+    font-weight: 700;
+}
+
+header p {
+    color: var(--color2);
+    margin-bottom: 32px;
+}
+
+header a {
+    font-family: "GeoR";
+    color: var(--color1);
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: var(--accent);
+    border-radius: 12px;
+    border: 1px solid var(--accent);
+}
+
+header a:hover {
+    border-color: var(--color1);
+    color: var(--color1);
+    background-color: #ff660000;
+}
+
+.headerBlock {
+    position: relative;
+
+}
+
+.headerVector {
+    position: absolute;
+    right: 3px;
+    top: -50px;
+    z-index: -1;
+}
+
+
+
+
+/* Преимущества */
+.advantages {
+    background-image: url(../img/Advantages.svg);
+    height: 429px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 120px;
+
+}
+
+
+.advantages_cadrs {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+}
+
+
+.advantages_card {
+    width: 321px;
+
+    h3 {
+        font-family: 'GeoSB';
+        font-size: 56px;
+        /* letter-spacing: 1.1%; */
+        color: var(--color1);
+        white-space: nowrap;
+
+    }
+
+    h4 {
+        font-family: 'GeoM';
+        font-size: 20px;
+        color: var(--accent);
+        margin-block: 6px;
+    }
+
+    p {
+        color: var(--color2);
+    }
+}
+
+.advantages_card_num {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 3px;
+
+    h2 {
+        font-family: 'Podkova';
+        color: var(--accent);
+        font-size: 22px;
+    }
+
+    .w36h1 {
+        background-color: var(--accent);
+        width: 36px;
+        height: 1px;
+    }
+}
+
+.w1h172 {
+    width: 1px;
+    height: 172px;
+    background-color: var(--color2);
+}
+
+
+
+/* Сотрудники */
+.employees_block {
+    background-image: url(../img/LogoTXT.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 842px;
+    margin-bottom: 120px;
+}
+
+body .employeesCardInfo {
+    position: absolute;
+    top: 34px;
+    width: 269px;
+    z-index: 1;
+
+    h3 {
+        font-family: 'GeoM';
+        font-weight: 500;
+        font-size: 40px;
+        width: 269px;
+        color: var(--color1);
+        margin-bottom: 12px;
+    }
+
+    h4 {
+        font-weight: normal;
+        color: var(--color2);
+        width: 269px;
+        margin-bottom: 8px;
+    }
+}
+
+.employeesCardInfoCategory {
+    width: 204px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    p {
+        color: var(--color2);
+    }
+
+    .employeesCardInfoCategorySvg {
+        display: flex;
+        gap: 10px;
+    }
+}
+
+.employeesCard {
+    position: relative;
+    /* width: 247px; */
+    height: 247px;
+    min-width: 496px;
+}
+
+.employeesCardImgfirst {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.employeesCardImglast {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.employeesCard:hover {
+    .employeesCardInfofirst {
+        left: 200px;
+    }
+
+    .employeesCardInfolast {
+        right: 200px;
+    }
+
+    .employeesCardImgfirst {
+        left: 15px;
+    }
+
+    .employeesCardImglast {
+        right: 15px;
+    }
+}
+
+.employeesCardlast {
+    display: flex;
+    justify-content: end;
+}
+
+.employees_cards {
+    margin-top: 56px;
+
+}
+
+.employeesCards:first-child {
+    margin-bottom: 80px;
+}
+
+.employeesCards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.employeesCardInfolast {
+    right: 226px;
+    text-align: end;
+    display: flex;
+    /* justify-content: end; */
+    flex-direction: column;
+    align-items: end;
+
+    .employeesCardInfoCategory {
+        justify-content: end;
+    }
+}
+
+.employeesCardInfofirst {
+    left: 226px;
+}
+
+
+/* Услуги */
+.Services {
+    width: 100%;
+    background-color: var(--bg2);
+}
+
+.Services_block {
+    padding-block: 61px;
+}
+
+.services {
+    margin-top: 56px;
+
+}
+
+.services {
+    display: flex;
+    justify-content: space-between;
+
+    .w550h2 {
+        width: 550px;
+        height: 2px;
+        background-color: var(--accent);
+        margin-block: 19px;
+    }
+
+    h3 {
+        font-family: 'GeoB';
+        font-size: 32px;
+        color: var(--color1);
+    }
+
+    p {
+        color: var(--color1);
+        font-size: 22px;
+    }
+
+    .servicesEmp {
+        display: flex;
+        gap: 50px;
+    }
+}
+
+.servicesNameAndLine {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    .servicesName {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.servicesPriceName {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    .servicesPrice {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+
+
+/* Галлерея работ */
+.gallery_block {
+    margin-top: 120px;
+}
+
+.gallery {
+    margin-top: 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.galleryUp {
+    display: flex;
+    gap: 24px;
+}
+
+.galleryUpSk {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.galleryDown {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 120px;
+}
+
+.w588h424 {
+    width: 588px;
+    height: 424px;
+    border-radius: 12px;
+}
+
+.w282h200 {
+    width: 282px;
+    height: 200px;
+    border-radius: 12px;
+}
+
+.w282h424 {
+    width: 282px;
+    height: 424px;
+    border-radius: 12px;
+}
+
+.w588h200 {
+    width: 588px;
+    height: 200px;
+    border-radius: 12px;
+}
+
+.w588h424,
+.w282h200,
+.w282h424,
+.w588h200 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #1a1715a1;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+        font-family: 'Podkova';
+    }
+
+}
+
+.w588h424:hover {
+    opacity: 1;
+}
+
+.w282h200:hover {
+    opacity: 1;
+}
+
+.w282h424:hover {
+    opacity: 1;
+}
+
+.w588h200:hover {
+    opacity: 1;
+}
+
+
+
+
+.galleryImgPos {
+    position: relative;
+}
+
+
+
+
+
+/* Точка барбершопа */
+.spot {
+    display: flex;
+    gap: 24px;
+    position: relative;
+
+}
+
+.spot_img1 {
+    margin-top: 210px;
+}
+
+.spot_img2 {
+    margin-top: 140px;
+    height: 380px;
+}
+
+.spot_img3 {
+    margin-top: 70px;
+}
+
+.spotAdresAndTime {
+    margin-top: 53px;
+}
+.spot img:hover{
+    transform: scale(1.1);
+}
+
+/* используется два раза общие настройки блока  */
+.AdresAndTime {
+
+    p {
+        font-size: 14px;
+        color: var(--color2);
+        margin-bottom: 4px;
+    }
+
+    h3 {
+        font-family: 'GeoB';
+        font-size: 20px;
+        color: var(--color1);
+    }
+}
+
+
+.SpotTextStart {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    h2 {
+        white-space: nowrap;
+        margin-bottom: 21px;
+    }
+
+    p {
+        font-size: 20px;
+        color: var(--color2);
+        width: 339px;
+    }
+}
+
+.w132h132 {
+    width: 132px;
+    height: 132px;
+    background-color: var(--accent);
+    position: absolute;
+    top: 412px;
+    left: 282px;
+    z-index: -1;
+}
+
+
+/* аккордион вопрос ответ */
+summary {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+
+    span {
+        font-family: 'GeoM';
+        font-size: 22px;
+        color: var(--color1);
+        width: 518px;
+    }
+
+    h3 {
+        font-family: 'Podkova';
+        font-size: 28px;
+        color: var(--color1);
+        width: 52px;
+    }
+}
+
+summary::after {
+    content: url(../img/accordion_pasive.svg);
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+details[open] summary::after {
+    content: url(../img/accordion_active.svg);
+}
+
+details[open] h3 {
+    color: var(--accent);
+}
+
+.AccordionBlock {
+    padding: 28px 0;
+    border-bottom: 0.5px solid var(--color2);
+    margin-bottom: 10px;
+    width: 615px;
+}
+
+.AccordionBlock:first-child {
+    border-top: 0.5px solid var(--color2);
+}
+
+.AccordionBlockActive {
+    margin: 8px 0 0 52px;
+    width: 437px;
+    font-size: 14px;
+    color: var(--color2);
+}
+
+.accordionText {
+    h2 {
+        width: 222px;
+        font-family: 'GeoB';
+        font-size: 48px;
+        margin-bottom: 32px;
+        color: var(--color1);
+    }
+
+    p {
+        color: var(--color2);
+        margin-bottom: 20px;
+        width: 276px;
+    }
+
+    h3 {
+        font-family: 'GeoB';
+        color: var(--color1);
+        font-size: 48px;
+        border-bottom: 1px solid var(--accent);
+        display: inline-block;
+    }
+}
+
+.accordion {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+    position: relative;
+    margin-bottom: 120px;
+
+    img {
+        position: absolute;
+        width: 582px;
+        top: 0;
+        left: 0;
+    }
+}
+
+
+
+
+/* записаться форма  */
+.Form {
+    background-color: var(--bg2);
+    padding: 40px;
+    width: 780px;
+    border-radius: 14px;
+}
+
+.Forms {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 22px;
+
+    .FoRm {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+
+        label {
+            color: var(--color2);
+        }
+
+        input {
+            width: 340px;
+            height: 56px;
+            border-radius: 10px;
+            background-color: var(--bg1);
+            border: 1px solid var(--color2);
+            outline: none;
+            color: var(--color2);
+            padding-left: 17px;
+        }
+
+        input::placeholder {
+            color: var(--color2);
+        }
+
+        input:focus {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        select {
+            width: 340px;
+            height: 56px;
+            border-radius: 10px;
+            background-color: var(--bg1);
+            border: 1px solid var(--color2);
+            outline: none;
+            color: var(--color2);
+            padding-left: 17px;
+        }
+
+        select:focus {
+            border-color: var(--accent);
+        }
+    }
+}
+
+.Forms:last-child {
+    margin-bottom: 36px;
+}
+
+.forms_true {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+
+    p {
+        font-size: 14px;
+        color: var(--color2);
+    }
+}
+
+.form {
+    button {
+        display: block;
+        width: 100%;
+        padding-block: 16px;
+        border-radius: 10px;
+        background-color: var(--accent);
+        border: 1px solid #ff660000;
+        cursor: pointer;
+        font-family: 'GeoB';
+        font-size: 18px;
+        color: var(--color1);
+    }
+
+    button:hover {
+        color: var(--color2);
+        border-color: var(--color2);
+        background-color: #ff660000;
+    }
+}
+
+
+.fotm_adres {
+    margin-bottom: 24px;
+}
+
+.formTextP {
+    color: var(--color2);
+    margin-top: 21px;
+    width: 308px;
+    margin-bottom: 38px;
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 120px;
+}
+
+
+
+
+/* подвал */
+footer {
+    background-color: var(--bg2);
+    padding-bottom: 120px;
+
+    p {
+        color: var(--color2);
+    }
+
+    a {
+        color: var(--color2);
+    }
+
+    h3 {
+        font-family: 'GeoM';
+        font-weight: 500;
+        color: var(--color1);
+    }
+}
+
+.footerLogo {
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    .footer_logo_txt img {
+        width: 138px;
+        height: 52px;
+        margin-bottom: 37px;
+    }
+
+    .footer_contact {
+        display: flex;
+        gap: 14px;
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .footer_contact img:hover {
+        transform: scale(1.2);
+    }
+}
+
+.footerNav {
+    h3 {
+        margin-bottom: 26px;
+    }
+
+    .footerNavBar {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    a {
+        position: relative;
+    }
+}
+
+.footerNav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--accent);
+    transform: scaleX(0);
+    transform-origin: bottom left;
+}
+
+.footerNav a:hover::after {
+    transform: scaleX(1);
+}
+
+
+
+.footerAdres P {
+    margin-top: 26px;
+    width: 121px;
+}
+
+
+.footerTime p {
+    margin-top: 26px;
+    width: 156px;
+    white-space: pre-wrap;
+}
+
+.footerNum a {
+    margin-top: 26px;
+    width: 130px;
+    display: inline-block;
+}
+
+.footerInf {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+    border-bottom: 1px solid var(--color2);
+    margin-bottom: 14px;
+}
+
+.footer_bottom {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+        position: relative;
+
+    }
+}
+
+.footer_bottom a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--accent);
+    transform: scaleX(0);
+    transform-origin: bottom left;
+}
+
+.footer_bottom a:hover::after {
+    transform: scaleX(1);
+}
